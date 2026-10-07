@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Муз.Статс - Сводка</title>
+</head>
+<body>
+    <header>
+        <h1 align="center">Муз.Статс</h1>
+        <a href="main_page.html">Главная</a> 
+        <a href="tablets_page.html">Сводка</a>
+    </header>
+    <hr>
+    <div>
+        <div>
+    <h2>График</h2>
+
+    <fieldset>
+        <legend><b>Значение по оси OX:</b></legend>
+        <label>
+            <input type="radio" id="axis_x" name="axis_x" value="genre" checked>
+            Жанр
+        </label>
+        <br>
+        <label>
+            <input type="radio" id="axis_x" name="axis_x" value="country">
+            Страна
+        </label>
+        <br>
+        <label>
+            <input type="radio" id="axis_x" name="axis_x" value="career-start">
+            Год начала карьеры
+        </label>
+    </fieldset>
+
+    <fieldset>
+        <legend><b>Значение по оси OY:</b></legend>
+        <label>
+            <input type="checkbox" id="axis_y" name="axis_y" value="listens" checked>
+            Число прослушиваний
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" id="axis_y" name="axis_y" value="artists">
+            Количество исполнителей
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" id="axis_y" name="axis_y" value="albums">
+            Количество альбомов
+        </label>
+    </fieldset>
+
+    <p><i>Здесь будет график</i></p>
+</div>
+        <hr>
+        <div>
+            <h2>Фильтр</h2>
+            <form action="#" method="get">
+                        <p><label>
+                            Название:<input type="text" id="name" name="name" size="20">
+                        </label></p>
+                        <p><label>
+                            Жанр:<input type="genre" id="genre" name="genre" size="20">
+                        </label></p>
+                        <p><label>
+                            Страна:<input type="country" id="country" name="country" size="20">
+                        </label></p>
+                        <p><label>
+                            Год:
+                        <label>от <input type="text" id="year_from" name="year_from" size="5"></label>
+                        <label>до <input type="text" id="year_to" name="year_to" size="5"></label>
+                        </label></p>
+                        <p><label>
+                            Кол-во альбомов:
+                        <label>от <input type="text" id="album_from" name="album_from" size="5"></label>
+                        <label>до <input type="text" id="album_to" name="album_to" size="5"></label>
+                        </label></p>
+                        <p><label>
+                            Кол-во слушателей (в десятках тыс.):
+                        <label>от <input type="text" id="streams_from" name="streams_from" size="5"></label>
+                        <label>до <input type="text" id="streams_to" name="streams_to" size="5"></label>
+                        </label></p>
+            </form>
+        </div>
+        <hr>
+        <div>
+            <h2>Сортировка</h2>
+            <form action="#" method="get">
+                        <p><label>Критерий 1:
+                        <select id="sort1" name="sort1">
+                            <option value="Нет">Нет</option>
+                            <option value="Название">Название</option>
+                            <option value="Жанр">Жанр</option>
+                            <option value="Страна">Страна</option>
+                            <option value="Год">Год</option>
+                            <option value="Альбомы">Альбомы</option>
+                            <option value="Слушатели">Слушатели</option>
+                            </select>
+                        </label>
+                        <input type="checkbox" name="sort1_desc"> по убыванию
+                    </p>
+                        <p><label>Критерий 2:
+                        <select id="sort2" name="sort2">
+                            <option value="Нет">Нет</option>
+                            <option value="Название">Название</option>
+                            <option value="Жанр">Жанр</option>
+                            <option value="Страна">Страна</option>
+                            <option value="Год">Год</option>
+                            <option value="Альбомы">Альбомы</option>
+                            <option value="Слушатели">Слушатели</option>
+                            </select>
+                        </label>
+                        <input type="checkbox" name="sort2_desc"> по убыванию
+                    </p>
+                    <p><label>Критерий 3:
+                        <select id="sort3" name="sort3">
+                            <option value="Название">Нет</option>
+                            <option value="Название">Название</option>
+                            <option value="Жанр">Жанр</option>
+                            <option value="Страна">Страна</option>
+                            <option value="Год">Год</option>
+                            <option value="Альбомы">Альбомы</option>
+                            <option value="Слушатели">Слушатели</option>
+                            </select>
+                        </label>
+                        <input type="checkbox" name="sort3_desc"> по убыванию
+                    </p>
+                <input type="submit" value="Применить">
+                <input type="reset" value="Сбросить">
+            </form>
+        </div>
+        <hr>
+        <div>
+            <h2 align="center">Таблица данных:</h2>
+            <table border="1" cellpadding="5" cellspacing="0" width="100%" align="center">
+                <thead>
+                    <tr bgcolor="#f0f0f0">
+                        <th width="4%">№</th>
+                        <th width="18%">Название</th>
+                        <th width="14%">Жанр</th>
+                        <th width="12%">Страна</th>
+                        <th width="10%">Год старта карьеры</th>
+                        <th width="12%">Альбомов</th>
+                        <th width="15%">Прослушивания, дес. тыс.</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>1</td><td>Scriptonite</td><td>Хип-хоп/R&B</td><td>Казахстан</td><td>2013</td><td>6</td><td>450</td></tr>
+                    <tr><td>2</td><td>Oxxxymiron</td><td>Хип-хоп</td><td>Россия</td><td>2011</td><td>3</td><td>350</td></tr>
+                    <tr><td>3</td><td>Morgenshtern</td><td>Хип-хоп</td><td>Россия</td><td>2017</td><td>4</td><td>320</td></tr>
+                    <tr><td>4</td><td>Хаски</td><td>Хип-хоп</td><td>Россия</td><td>2014</td><td>5</td><td>280</td></tr>
+                    <tr><td>5</td><td>Big Baby Tape</td><td>Трэп</td><td>Россия</td><td>2017</td><td>4</td><td>250</td></tr>
+                    <tr><td>6</td><td>Miyagi & Эндшпиль</td><td>Хип-хоп</td><td>Россия</td><td>2015</td><td>5</td><td>240</td></tr>
+                    <tr><td>7</td><td>Макс Корж</td><td>Поп-рок</td><td>Беларусь</td><td>2012</td><td>7</td><td>235</td></tr>
+                    <tr><td>8</td><td>Баста</td><td>Хип-хоп</td><td>Россия</td><td>2003</td><td>8</td><td>225</td></tr>
+                    <tr><td>9</td><td>Егор Крид</td><td>Поп</td><td>Россия</td><td>2013</td><td>6</td><td>215</td></tr>
+                    <tr><td>10</td><td>Jah Khalib</td><td>Хип-хоп/R&B</td><td>Казахстан</td><td>2013</td><td>7</td><td>205</td></tr>
+                    <tr><td>11</td><td>Кино</td><td>Пост-панк</td><td>Россия</td><td>1981</td><td>8</td><td>200</td></tr>
+                    <tr><td>12</td><td>Мот</td><td>Поп/R&B</td><td>Россия</td><td>2009</td><td>6</td><td>195</td></tr>
+                    <tr><td>13</td><td>Элджей</td><td>Хип-хоп</td><td>Россия</td><td>2016</td><td>4</td><td>190</td></tr>
+                    <tr><td>14</td><td>Face</td><td>Хип-хоп</td><td>Россия</td><td>2017</td><td>4</td><td>185</td></tr>
+                    <tr><td>15</td><td>Feduk</td><td>Хип-хоп</td><td>Россия</td><td>2012</td><td>6</td><td>180</td></tr>
+                    <tr><td>16</td><td>Монеточка</td><td>Поп</td><td>Россия</td><td>2017</td><td>3</td><td>175</td></tr>
+                    <tr><td>17</td><td>Zivert</td><td>Поп</td><td>Россия</td><td>2018</td><td>2</td><td>170</td></tr>
+                    <tr><td>18</td><td>Тима Белорусских</td><td>Поп</td><td>Беларусь</td><td>2018</td><td>3</td><td>165</td></tr>
+                    <tr><td>19</td><td>Дора</td><td>Поп</td><td>Россия</td><td>2019</td><td>3</td><td>160</td></tr>
+                    <tr><td>20</td><td>OG Buda</td><td>Трэп</td><td>Россия</td><td>2016</td><td>4</td><td>160</td></tr>
+                    <tr><td>21</td><td>Pharaoh</td><td>Хип-хоп</td><td>Россия</td><td>2014</td><td>5</td><td>150</td></tr>
+                    <tr><td>22</td><td>ЛСП</td><td>Хип-хоп</td><td>Беларусь</td><td>2013</td><td>4</td><td>150</td></tr>
+                    <tr><td>23</td><td>Artik & Asti</td><td>Поп</td><td>Россия</td><td>2015</td><td>5</td><td>150</td></tr>
+                    <tr><td>24</td><td>Boulevard Depo</td><td>Хип-хоп</td><td>Россия</td><td>2013</td><td>5</td><td>145</td></tr>
+                    <tr><td>25</td><td>Lizer</td><td>Хип-хоп</td><td>Россия</td><td>2016</td><td>4</td><td>140</td></tr>
+                    <tr><td>26</td><td>163ONMYNECK</td><td>Трэп</td><td>Россия</td><td>2015</td><td>4</td><td>135</td></tr>
+                    <tr><td>27</td><td>Земфира</td><td>Рок</td><td>Россия</td><td>1999</td><td>8</td><td>130</td></tr>
+                    <tr><td>28</td><td>Король и Шут</td><td>Панк-рок</td><td>Россия</td><td>1988</td><td>11</td><td>125</td></tr>
+                    <tr><td>29</td><td>Тимати</td><td>Хип-хоп</td><td>Россия</td><td>2005</td><td>8</td><td>120</td></tr>
+                    <tr><td>30</td><td>Slava Marlow</td><td>Хип-хоп</td><td>Россия</td><td>2018</td><td>2</td><td>120</td></tr>
+                    <tr><td>31</td><td>Anacondaz</td><td>Рэп-рок</td><td>Россия</td><td>2011</td><td>6</td><td>115</td></tr>
+                    <tr><td>32</td><td>Сплин</td><td>Рок</td><td>Россия</td><td>1986</td><td>15</td><td>110</td></tr>
+                    <tr><td>33</td><td>Gone.Fludd</td><td>Хип-хоп</td><td>Россия</td><td>2016</td><td>4</td><td>110</td></tr>
+                    <tr><td>34</td><td>Би-2</td><td>Рок</td><td>Россия</td><td>1988</td><td>14</td><td>105</td></tr>
+                    <tr><td>35</td><td>Mayot</td><td>Хип-хоп</td><td>Россия</td><td>2017</td><td>3</td><td>105</td></tr>
+                    <tr><td>36</td><td>Ленинград</td><td>Ска-панк</td><td>Россия</td><td>1997</td><td>12</td><td>100</td></tr>
+                    <tr><td>37</td><td>The Hatters</td><td>Поп-рок</td><td>Россия</td><td>2013</td><td>5</td><td>100</td></tr>
+                    <tr><td>38</td><td>Мумий Тролль</td><td>Рок</td><td>Россия</td><td>1983</td><td>15</td><td>95</td></tr>
+                    <tr><td>39</td><td>Руки Вверх!</td><td>Поп</td><td>Россия</td><td>1993</td><td>15</td><td>95</td></tr>
+                    <tr><td>40</td><td>Люся Чеботина</td><td>Поп</td><td>Россия</td><td>2018</td><td>4</td><td>90</td></tr>
+                    <tr><td>41</td><td>Три дня дождя</td><td>Поп-рок</td><td>Россия</td><td>2009</td><td>4</td><td>90</td></tr>
+                    <tr><td>42</td><td>Noize MC</td><td>Рэп-рок</td><td>Россия</td><td>2005</td><td>8</td><td>85</td></tr>
+                    <tr><td>43</td><td>Little Big</td><td>Рейв-поп</td><td>Россия</td><td>2013</td><td>4</td><td>85</td></tr>
+                    <tr><td>44</td><td>Звери</td><td>Поп-рок</td><td>Россия</td><td>1999</td><td>10</td><td>80</td></tr>
+                    <tr><td>45</td><td>Любэ</td><td>Поп-рок</td><td>Россия</td><td>1989</td><td>25</td><td>70</td></tr>
+                    <tr><td>46</td><td>IC3PEAK</td><td>Электро-поп</td><td>Россия</td><td>2013</td><td>5</td><td>70</td></tr>
+                    <tr><td>47</td><td>Kai Angel</td><td>Трэп</td><td>Россия</td><td>2016</td><td>4</td><td>70</td></tr>
+                    <tr><td>48</td><td>ДДТ</td><td>Рок</td><td>Россия</td><td>1980</td><td>25</td><td>60</td></tr>
+                    <tr><td>49</td><td>Каста</td><td>Хип-хоп</td><td>Россия</td><td>1998</td><td>8</td><td>60</td></tr>
+                    <tr><td>50</td><td>Платина</td><td>Хип-хоп</td><td>Латвия</td><td>2015</td><td>3</td><td>55</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
